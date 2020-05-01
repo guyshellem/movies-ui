@@ -10,7 +10,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  private configUrl = 'https://www.mocky.io/v2/5eac59a83300006465dfe344';
+  private configUrl = 'https://www.mocky.io/v2/5eac7f29330000bf0cdfe4e0';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -26,7 +26,7 @@ export class MovieService {
   public postMovie(movie: Movie): Observable<Movie[]> {
     return this.http.post<Movie>(this.configUrl, movie, this.httpOptions)
     .pipe(
-        catchError(this.handleError<Movie[]>('addMovie'))
+        catchError(this.handleError<Movie[]>('addMovie', []))
       );
   }
 

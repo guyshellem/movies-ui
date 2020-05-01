@@ -34,8 +34,8 @@ export class MovieComponent implements OnInit {
     this.requests.getMovies().subscribe(movies => this.movies = movies['movies']);
   }
 
-  addMovies() {
-    this.requests.postMovie(this.mockInput).subscribe(data => this.movies = data);
+  addMovies(name: string) {
+    this.requests.postMovie({ name: name } as Movie).subscribe(movies => this.movies = movies['movies']);
   }
 
 }
