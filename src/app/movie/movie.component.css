@@ -6,6 +6,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #000000;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 30;
 }
@@ -33,4 +41,9 @@ button {
   background-color: #9ee780;
   border: none;
   padding: 4px 8px;
+}
+
+button:hover {
+  color: #c566f1;
+  background-color: #a0d68a;
 }
