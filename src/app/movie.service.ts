@@ -10,14 +10,14 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  private configUrl = 'https://www.mocky.io/v2/5eac53e23300008524dfe329';
+  private configUrl = 'https://www.mocky.io/v2/5eac55b23300009a5ddfe332';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
   public getMovies(): Observable<Movie[]> {
-    return this.http.get<Movie>(this.configUrl, this.httpOptions)
+    return this.http.get<Movie[]>(this.configUrl, this.httpOptions)
     .pipe(
         catchError(this.handleError<Movie[]>('getMovies', []))
       );

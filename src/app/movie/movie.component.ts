@@ -23,7 +23,7 @@ export class MovieComponent implements OnInit {
   }
 
   constructor(private requests: MovieService) {
-    this.movies = [];
+    
   }
 
   ngOnInit() {
@@ -31,7 +31,8 @@ export class MovieComponent implements OnInit {
   }
 
   showMovies() {
-    this.requests.getMovies().subscribe(data => this.movies = data);
+    this.requests.getMovies().subscribe(movies => this.movies = movies['movies']);
+    console.log(this.movies);
   }
 
   addMovies() {
