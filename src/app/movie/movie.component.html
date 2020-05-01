@@ -1,0 +1,13 @@
+
+<button (click)='showMovies();'>
+  Get
+</button>
+
+<button (click)='addMovies();'>
+  Post
+</button>
+
+
+  <a *ngFor="let movie of movies">
+    Movie name: {{movie.name}}
+  </a>
