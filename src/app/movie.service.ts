@@ -10,7 +10,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  private configUrl = 'https://www.mocky.io/v2/5eac55b23300009a5ddfe332';
+  private configUrl = 'https://www.mocky.io/v2/5eac59a83300006465dfe344';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

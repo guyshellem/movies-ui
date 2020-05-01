@@ -32,7 +32,6 @@ export class MovieComponent implements OnInit {
 
   showMovies() {
     this.requests.getMovies().subscribe(movies => this.movies = movies['movies']);
-    console.log(this.movies);
   }
 
   addMovies() {
