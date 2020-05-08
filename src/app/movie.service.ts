@@ -24,7 +24,7 @@ export class MovieService {
   }
 
   public postMovie(movie: Movie): Observable<Movie[]> {
-    return this.http.post<Movie>(this.configUrl, movie, this.httpOptions)
+    return this.http.post<Movie[]>(this.configUrl, movie, this.httpOptions)
     .pipe(
         catchError(this.handleError<Movie[]>('addMovie', []))
       );
